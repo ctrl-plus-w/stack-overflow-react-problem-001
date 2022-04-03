@@ -1,0 +1,64 @@
+@import "./colours.scss";
+
+.skills-body {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: $background-colour;
+  display: flex;
+  justify-content: center;
+  flex-flow: no-wrap;
+
+  .skills-info-container {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .skills-title {
+      position: relative;
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 40px;
+      color: $text-colour;
+    }
+
+    .skills-description {
+      padding: 10%;
+      padding-top: 10px;
+      color: $text-colour;
+      opacity: 0.8;
+      font-size: 15px;
+    }
+  }
+  .sphere-container {
+    flex-basis: 60%;
+    perspective: calc(min(100vh, 100vw));
+
+    .sphere-item {
+      overflow: hidden;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      white-space: nowrap;
+      font-size: 20px;
+      font-weight: 500;
+      // transform: translateX(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skills-body {
+    flex-direction: column;
+  }
+  .skills-info-container {
+    flex-basis: 40%;
+  }
+  .sphere-container {
+    flex-basis: 60%;
+  }
+}
